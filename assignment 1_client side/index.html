@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Weather Report</title>
+	<link rel="stylesheet" href="cssfile.css" />
+	<script type="text/javascript" src="xmlfile.js"></script>
+	<script type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+</head>
+
+<body>
+	<main id="main">
+
+		<header width="100%">
+
+			<h1 id="Heading" style="font-family:verdana" text-align="center"> Weather Forecast</h1>
+		</header>
+		<div id="backimg">
+			<div id="search1">
+				<input type="text" placeholder="Enter the city" id="search2">
+				<button id="search" onclick="loadDoc()">Search</button>
+				<table width="100%" border="0" id="table1">
+					<colgroup>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+						<col>
+					</colgroup>
+
+					<tr id="thead1">
+						<td width="30%" id="main_tree1">
+							<div class="card">
+								<div class="container">
+									<p id="city">CITY</p>
+
+									<h1 id="temp"><b>&degC</b></h1>
+									<span id="pressure">p</span>
+									<span id="humidity">h</span>
+									<span id="cloud">c</span>
+
+
+								</div>
+							</div>
+
+						</td>
+
+					</tr>
+					<tr>Monday</tr>
+					<tr>Tuesday</tr>
+					<tr>Wednesday</tr>
+					<tr>Thursday</tr>
+					<tr>Friday</tr>
+					<tr>Saturday</tr>
+					<tr>Sunday</tr>
+				</table>
+			</div>
+			<br><br><br> <br><br> <br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+			<br><br><br>
+		</div>
+
+		<div class="container">
+			<h2>Chart 1 Temperature</h2>
+			<div>
+				<canvas id="myChart"></canvas>
+			</div>
+		</div>
+		<script>var ctx = document.getElementById('myChart').getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'line',
+				data: {
+					labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+					datasets: [{
+						label: 'Min',
+						data: [1, 2, 1, 4, 1.5, 2, 3],
+						backgroundColor: "rgba(0, 191, 255)"
+					}, {
+						label: 'Max',
+						data: [6, 5, 8, 9, 5, 4, 7],
+						backgroundColor: "rgba(0, 64, 255)"
+					}]
+				}
+			});
+		</script>
+		<div class="contain">
+			<h2>Chart 2 Sunrise & Sunset</h2>
+			<div>
+				<canvas id="chart"></canvas>
+			</div>
+		</div>
+		<script>var ctx = document.getElementById("chart").getContext('2d');
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+					datasets: [{
+						label: 'sunrise',
+						data: [7, 6.30, 5.50, 6, 7.5, 6.32, 5.54],
+						backgroundColor: "rgba(153,2,51,1)"
+					}, {
+						label: 'sunset',
+						data: [5.50, 5.9, 7.5, 6.5, 5.40, 7.3, 6.30],
+						backgroundColor: "rgba(255, 191, 0)"
+					}]
+				}
+			});</script>
+
+
+
+	</main>
+
+</body>
+
+</html>
