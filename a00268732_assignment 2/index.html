@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js"></script>
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <h1>Introduction</h1>
+    <header>
+
+        <p class="para1">The “Flexible Box” or “Flexbox” layout mode offers an alternative to Floats for defining the overall appearance of a web page. Whereas floats only let us horizontally position our boxes, flexbox gives us complete control over the alignment, direction,
+            order, and size of our boxes. Diagram: comparison of flexbox alignment, direction, order, and size properties
+            <br> The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes). A flex container
+            expands items to fill available free space or shrinks them to prevent overflow.
+        </p>
+    </header>
+
+
+    <h2>Calculator App</h2>
+
+    <div class="calculator">
+
+        <input type="text" id="ans" class="calculator_screen" name="calctext" />
+
+        <div class="calc_button">
+
+            <button type="button" class="operator" value="+" onclick="insert('+')">+</button>
+            <button type="button" class="operator" value="-" onclick="insert('-')">-</button>
+            <button type="button" class="operator" value="*" onclick="insert('*')">*</button>
+            <button type="button" class="operator" value="/" onclick="insert('/')">/</button>
+
+            <button type="button" value="7" onclick="insert(7)">7</button>
+            <button type="button" value="8" onclick="insert(8)">8</button>
+            <button type="button" value="9" onclick="insert(9)">9</button>
+
+
+            <button type="button" value="4" onclick="insert(4)">4</button>
+            <button type="button" value="5" onclick="insert(5)">5</button>
+            <button type="button" value="6" onclick="insert(6)">6</button>
+
+
+            <button type="button" value="1" onclick="insert(1)">1</button>
+            <button type="button" value="2" onclick="insert(2)">2</button>
+            <button type="button" value="3" onclick="insert(3)">3</button>
+
+
+            <button type="button" value="0" onclick="insert(0)">0</button>
+            <button type="button" class="decimal" value="." onclick="insert('.')">.</button>
+            <button type="button" class="clear" value="all-clear" onclick="clr()">AC</button>
+
+            <button type="button" class="equal" value="=" onclick="solve()">=</button>
+
+        </div>
+    </div>
+    <h3>When to Use Flexbox</h3>
+    <footer>
+        <br>
+        <p class="para2"> Personally, I like to use flexbox for a few main things: scaling, vertically and horizontally aligning, and re-ordering elements within a container. These are best used on page components within a parent element. There are plenty of other uses
+            for flexbox, like changing the direction of a column or row. But honestly, I prefer to use media-queries and percentage-based widths for creating columns and rows.</p>
+    </footer>
+
+
+</body>
+
+</html>
